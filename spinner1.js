@@ -1,10 +1,3 @@
-// we can use \r to return cursor back to beginning of line we were on
-// after this, anything we write to stdout will overwrite that line
-
-// process.stdout.write('hello from spinner1.js... \rheyyy\n');
-
-// using this, we can fake animation by replacing/rewriting characters in same spot after delay
-
 setTimeout(() => {
   process.stdout.write('\r|   ');
 }, 100);
@@ -18,7 +11,6 @@ setTimeout(() => {
 }, 500);
 
 setTimeout(() => {
-  // Need to escape the backslash since it's a special character.
   process.stdout.write('\r\\   ');
 }, 700);
 
